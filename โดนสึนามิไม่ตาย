@@ -1,0 +1,10 @@
+local player = game.Players.LocalPlayer
+
+player.CharacterAdded:Connect(function(char)
+	local hrp = char:WaitForChild("HumanoidRootPart")
+	
+	while true do
+		wait(0.1)
+		hrp.Velocity = Vector3.new(hrp.Velocity.X, 60, hrp.Velocity.Z)
+	end
+end)
